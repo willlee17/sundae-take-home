@@ -1,4 +1,4 @@
-Hello! My name’s William and this is my take on the Sundae frontend challenge. I was tasked with recreating the offers procedures screenshot and this is what I have.
+Hello! My name’s William and this is my take on the Sundae frontend challenge. I was tasked with recreating the offers procedures screenshot and this is what I have. To run this challenge, pull/download this repository, run 'npm install' to install the few libraries I included, and then run 'npm start' or 'yarn start'. 
 
 I recreated the screenshot as close as I could with CRA instead of webpack with the time given. Instead of using just one component, I decided to use multiple components to showcase nested components and functionality. The main app component holds the “data” (in this case the 3 procedures). It then sends them down to my RequestOfferHome.js component as props. 
 
