@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
 import './App.css';
+import RequestOfferHome from './RequestOfferHome';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      offerProcedures: [
+        {
+          id: 1,
+          title: 'FREE HOME ASSESSMENT',
+          info: `Fill out the form below and we'll contact you within 24 hours to schedule your free, no obligation home assessment.`
+        },
+        {
+          id: 2,
+          title: 'GET A CASH OFFER',
+          info: `Sundae provides the highest off-market price for your house as-is.
+          We also offer a $10,000 cash advance if you need more immediate financial support prior to closing.`
+        },
+        {
+          id: 3,
+          title: 'CLOSE AT YOUR PACE',
+          info: `Close as quickly as 10 days. Or take your time and close up to 60 days after you accept your offer. It’s up to you.`
+        }
+      ]
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <RequestOfferHome offerProcedures={this.state.offerProcedures}/>
+      </div>
+    );
+  }
 }
 
 export default App;

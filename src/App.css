@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Verdana", sans-serif
 }
 
 .App-logo {
@@ -19,4 +20,40 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.requestOfferHome {
+  background-color: rgb(250, 250, 250);
+  height: 100vh;
+  width: 100vw;
+}
+
+.sundaeLogo {
+  margin-right: -10rem;
+}
+
+.offerButton {
+  background-color: rgba(224,54,88) !important;
+  padding: 1rem !important;
+  margin-top: -8rem !important;
+}
+
+.procedureInfoHolder {
+  margin-bottom: 1rem;
+}
+
+.procedureAvatarHolder {
+  margin-top: 1rem !important;
+}
+
+.procedureTitleHolder {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.procedureInfoHolder {
+  font-weight: light;
+  font-size: 0.8rem;
+  opacity: 0.75;
 }
