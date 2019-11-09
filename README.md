@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! My name’s William and this is my take on the Sundae frontend challenge. I was tasked with recreating the offers procedures screenshot and this is what I have.
 
-## Available Scripts
+I recreated the screenshot as close as I could with CRA instead of webpack with the time given. Instead of using just one component, I decided to use multiple components to showcase nested components and functionality. The main app component holds the “data” (in this case the 3 procedures). It then sends them down to my RequestOfferHome.js component as props. 
 
-In the project directory, you can run:
+The RequestOfferHome.js component is a React PureComponent that improves the components’ performance due to subtle changes on the shouldComponentUpdate() lifecycle method. I used MaterialUI’s Grid component for my projects’ grid system. Here I split the screen in half, one being the image (which I screenshoted from the screenshot) and the second being a functional component, called OfferProceduresList, which carries all the props thrown down. 
 
-### `yarn start`
+Inside OfferProceduresList, I use .map() to iterate through every procedure in the props and return them inside OfferProcedure. OfferProcedure is the last functional component and it takes the specified feature and adds a number avatar and stylized texts. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_________________________________________
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Styles
+I used MaterialUI for styling the project. For regular CSS, I  placed most of them on App.css but some MaterialUI specific stylings were left in the component code (OfferProcedure.js ‘useStyles’) and one simple inline CSS style. The avatar (the pink numbered circles) dynamically updates depending on the “id” of the procedure. So when a fourth procedure is given, if the id is 4, the avatar will update with a pink 4. 	
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_________________________________________
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Improvements
+- If I had more time, the first thing I’d do is to improve the responsiveness of my project. I did use MaterialUI’s Grid system as a substitute for flex box. However, I didn’t have enough time to re-edit the stylings so that they appear better on smaller screen sizes. 
+- I realize I had the choice to combine OfferProceduresList and OfferProcedures into one big functional component but I wanted to keep code clean and show nested components. 
+- I would also have added a routing library like React Router to take the app to a different component if the user clicks on the request offer button. 
+- The paragraph that describes the steps could be squeezed in tighter. 
